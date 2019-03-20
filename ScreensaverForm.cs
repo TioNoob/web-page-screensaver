@@ -90,7 +90,7 @@ namespace pl.polidea.lab.Web_Page_Screensaver
             }
             else
             {
-                webView1.Visible = false;
+                webBrowser.Visible = false;
             }
         }
 
@@ -101,15 +101,15 @@ namespace pl.polidea.lab.Web_Page_Screensaver
 
             if (string.IsNullOrWhiteSpace(url))
             {
-                webView1.Visible = false;
+                webBrowser.Visible = false;
             }
             else
             {
-                webView1.Visible = true;
+                webBrowser.Visible = true;
                 try
                 {
                     Debug.WriteLine($"Navigating: {url}");
-                    webView1.Navigate(url);
+                    webBrowser.Navigate(url);
                 }
                 catch
                 {
