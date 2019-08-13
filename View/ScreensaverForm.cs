@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using System.Diagnostics;
-using System.Collections.Generic;
 using Web_Page_Screensaver.Extension;
-using System.Drawing;
 
 namespace pl.polidea.lab.Web_Page_Screensaver
 {
