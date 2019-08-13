@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Collections.Generic;
 using Web_Page_Screensaver.Extension;
+using System.Drawing;
 
 namespace pl.polidea.lab.Web_Page_Screensaver
 {
@@ -15,6 +16,9 @@ namespace pl.polidea.lab.Web_Page_Screensaver
 
         public ScreensaverForm()
         {
+            Location = new Point(screensaverPreferences.PrimaryScreen.Bounds.Left, screensaverPreferences.PrimaryScreen.Bounds.Top);
+            Size = new Size(screensaverPreferences.PrimaryScreen.Bounds.Width, screensaverPreferences.PrimaryScreen.Bounds.Height);
+
             SetGlobalEventHandler();
 
             InitializeComponent();
