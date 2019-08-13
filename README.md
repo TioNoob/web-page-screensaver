@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.io/TioNoob/web-page-screensaver.svg)](http://hits.dwyl.io/TioNoob/web-page-screensaver)
+
 # web-page-screensaver
 
 Display a web page as your screensaver
