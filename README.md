@@ -1,5 +1,5 @@
 [![HitCount](http://hits.dwyl.io/TioNoob/web-page-screensaver.svg)](http://hits.dwyl.io/TioNoob/web-page-screensaver)
-
+[![Build Status](https://travis-ci.org/TioNoob/web-page-screensaver.svg?branch=master)](https://travis-ci.org/TioNoob/web-page-screensaver)
 # web-page-screensaver
 
 Display a web page as your screensaver
