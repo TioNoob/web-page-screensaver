@@ -57,53 +57,22 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PreferencesManager.cs" />
-    <Compile Include="PreferencesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PreferencesForm.Designer.cs">
-      <DependentUpon>PreferencesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PrefsByScreenUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PrefsByScreenUserControl.Designer.cs">
-      <DependentUpon>PrefsByScreenUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ScreensaverForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ScreensaverForm.Designer.cs">
-      <DependentUpon>ScreensaverForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PreferencesForm.resx">
-      <DependentUpon>PreferencesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PrefsByScreenUserControl.resx">
-      <DependentUpon>PrefsByScreenUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -126,6 +95,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Preferences\ScreensaverPreferences.cs" />
+    <Compile Include="View\ScreensaverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ScreensaverForm.Designer.cs">
+      <DependentUpon>ScreensaverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GlobalUserEventHandler.cs" />
+    <Compile Include="Extension\ListExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Preferences\" />
+    <Folder Include="View\" />
+    <Folder Include="Extension\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Condition="'$(ConfigurationName)' == 'Release'">
