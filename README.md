@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/TioNoob/web-page-screensaver.svg?branch=master)](https://travis-ci.org/TioNoob/web-page-screensaver)
 [![codecov](https://codecov.io/gh/TioNoob/web-page-screensaver/branch/master/graph/badge.svg)](https://codecov.io/gh/TioNoob/web-page-screensaver)
 [![Known Vulnerabilities](https://snyk.io//test/github/TioNoob/web-page-screensaver/badge.svg?targetFile=Web-Page-Screensaver.csproj)](https://snyk.io//test/github/TioNoob/web-page-screensaver?targetFile=Web-Page-Screensaver.csproj)
-[![Join the chat at https://gitter.im/{ORG-or-USERNAME}/{REPO-NAME}](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dwyl/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/TioNoob/web-page-screensaver](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dwyl/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # web-page-screensaver
 
