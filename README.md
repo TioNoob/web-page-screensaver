@@ -1,6 +1,7 @@
 [![HitCount](http://hits.dwyl.io/TioNoob/web-page-screensaver.svg)](http://hits.dwyl.io/TioNoob/web-page-screensaver)
 [![Build Status](https://travis-ci.org/TioNoob/web-page-screensaver.svg?branch=master)](https://travis-ci.org/TioNoob/web-page-screensaver)
 [![codecov](https://codecov.io/gh/TioNoob/web-page-screensaver/branch/master/graph/badge.svg)](https://codecov.io/gh/TioNoob/web-page-screensaver)
+[![Known Vulnerabilities](https://snyk.io//test/github/TioNoob/web-page-screensaver/badge.svg?targetFile=Web-Page-Screensaver.csproj)](https://snyk.io//test/github/TioNoob/web-page-screensaver?targetFile=Web-Page-Screensaver.csproj)
 
 # web-page-screensaver
 
