@@ -13,7 +13,7 @@ namespace WebpageScreensaver.App.Preferences
             CloseOnActivity = true;
             Urls = LoadUrlsAllScreens();
             RandomizeUrls = false;
-            CloseOnActivity = true;
+            CloseOnActivity = false;
             RotateInterval = 60;
         }
 

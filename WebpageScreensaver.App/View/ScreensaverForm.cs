@@ -4,8 +4,8 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using WebpageScreensaver.App.Preferences;
 using WebpageScreensaver.App.Extension;
+using WebpageScreensaver.App.Preferences;
 
 namespace WebpageScreensaver.App.View
 {
@@ -17,21 +17,66 @@ namespace WebpageScreensaver.App.View
 
         public ScreensaverForm()
         {
-            Location = new Point(screensaverPreferences.PrimaryScreen.Bounds.Left, screensaverPreferences.PrimaryScreen.Bounds.Top);
-            Size = new Size(screensaverPreferences.PrimaryScreen.Bounds.Width, screensaverPreferences.PrimaryScreen.Bounds.Height);
-
-            SetGlobalEventHandler();
+            PreConfigureForm();
 
             InitializeComponent();
+
+            FixAppearance();
+        }
+
+        private void PreConfigureForm()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            SetUserActivityHandler();
+        }
+
+        private void SetUserActivityHandler()
+        {
+            GlobalUserEventHandler userEventHandler = new GlobalUserEventHandler();
+            userEventHandler.Event += HandleUserActivity;
+
+            Application.AddMessageFilter(userEventHandler);
+        }
+
+        private void HandleUserActivity()
+        {
+            if (screensaverPreferences.CloseOnActivity)
+            {
+                Close();
+            }
+            else
+            {
+                closeButton.Visible = true;
+                Cursor.Show();
+            }
+        }
+
+        private void FixAppearance()
+        {
+            SetLocation();
+            SetSize();
 
             Cursor.Hide();
         }
 
-        private void SetGlobalEventHandler()
+        private void SetSize()
         {
-            GlobalUserEventHandler userEventHandler = new GlobalUserEventHandler();
-            userEventHandler.Event += HandleUserActivity;
+            Size = new Size(screensaverPreferences.PrimaryScreen.Bounds.Width, screensaverPreferences.PrimaryScreen.Bounds.Height);
         }
+
+        private void SetLocation()
+        {
+            Location = new Point(screensaverPreferences.PrimaryScreen.Bounds.Left, screensaverPreferences.PrimaryScreen.Bounds.Top);
+        }
+
+        public void Run()
+        {
+            Application.Run(this);
+        }
+
+        #region Form Methods
 
         private void ScreensaverForm_Load(object sender, EventArgs e)
         {
@@ -61,6 +106,20 @@ namespace WebpageScreensaver.App.View
             timer.Start();
         }
 
+        private void ShowNextSite()
+        {
+            currentSiteIndex++;
+
+            List<string> urls = screensaverPreferences.Urls;
+
+            if (currentSiteIndex >= urls.Count)
+            {
+                currentSiteIndex = 0;
+            }
+
+            BrowseTo(urls[currentSiteIndex]);
+        }
+
         private void BrowseTo(string url)
         {
             webBrowser.Visible = true;
@@ -76,36 +135,11 @@ namespace WebpageScreensaver.App.View
             }
         }
 
-        private void ShowNextSite()
-        {
-            currentSiteIndex++;
-
-            List<string> urls = screensaverPreferences.Urls;
-
-            if (currentSiteIndex >= urls.Count)
-            {
-                currentSiteIndex = 0;
-            }
-
-            BrowseTo(urls[currentSiteIndex]);
-        }
-
-        private void HandleUserActivity()
-        {
-            if (screensaverPreferences.CloseOnActivity)
-            {
-                Close();
-            }
-            else
-            {
-                closeButton.Visible = true;
-                Cursor.Show();
-            }
-        }
-
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        #endregion Form Methods
     }
 }
