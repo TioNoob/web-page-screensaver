@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace pl.polidea.lab.Web_Page_Screensaver
+namespace WebpageScreensaver.App.View
 {
     public class GlobalUserEventHandler : IMessageFilter
     {
@@ -13,6 +13,7 @@ namespace pl.polidea.lab.Web_Page_Screensaver
         private const int WM_KEYUP = 0x101;
 
         private Point? lastMousePos;
+
         public event UserEvent Event;
 
         public bool PreFilterMessage(ref Message message)

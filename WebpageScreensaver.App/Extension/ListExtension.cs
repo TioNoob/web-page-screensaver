@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Web_Page_Screensaver.Extension
+namespace WebpageScreensaver.App.Extension
 {
     public static class ListExtension
     {

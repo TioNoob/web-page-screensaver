@@ -4,9 +4,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Web_Page_Screensaver.Extension;
+using WebpageScreensaver.App.Preferences;
+using WebpageScreensaver.App.Extension;
 
-namespace pl.polidea.lab.Web_Page_Screensaver
+namespace WebpageScreensaver.App.View
 {
     public partial class ScreensaverForm : Form
     {

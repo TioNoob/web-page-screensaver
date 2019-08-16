@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace pl.polidea.lab.Web_Page_Screensaver
+namespace WebpageScreensaver.App.Preferences
 {
     public class SreenPreferences
     {
