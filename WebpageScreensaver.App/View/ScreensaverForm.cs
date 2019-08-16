@@ -84,7 +84,7 @@ namespace WebpageScreensaver.App.View
             {
                 if (screensaverPreferences.RandomizeUrls)
                 {
-                    screensaverPreferences.Urls = screensaverPreferences.Urls.Shuffle();
+                    screensaverPreferences.Urls.Shuffle();
                 }
 
                 InitializeTimer();
