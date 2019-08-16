@@ -1,6 +1,6 @@
 language: csharp
 solution: WebpageScreensaver.sln
-before_build:
+install:
   - nuget restore WebpageScreensaver.sln
   - nuget install NUnit.Console -Version 3.10.0 -OutputDirectory testrunner
 script:
